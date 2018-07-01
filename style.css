@@ -1,5 +1,7 @@
 body {
   color: #4C4C4C;
+  display: flex;
+  flex-wrap: wrap;
   font-family: PT Serif, sans-serif;
   line-height: 1.5;
   margin-left: auto;
@@ -9,13 +11,12 @@ body {
 }
 
 img {
-  float: left;
   margin: 0px 15px 15px 0px;
-  width: 20%;
 }
 
 section {
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  width: 100%;
 }
 
 em {
@@ -25,6 +26,11 @@ em {
 
 ul {
   list-style-type: square;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
 }
 
 h1,
@@ -46,8 +52,8 @@ h4 {
 }
 
 .summary {
-  clear: left;
   font-size: large;
+  border-top: 0;
 }
 
 .simple-ul {
@@ -59,16 +65,46 @@ h4 {
   body {
     max-width: 700px; 
   }
+
+  img, .profile-pic {
+    width: 233px;
+    margin-right: 20px;
+    align-self: center;
+  }
+
+  .summary {
+    width: 447px;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 767px) {
   body {
     max-width: 560px; 
   }
+
+  img, .profile-pic {
+    width: 187px;
+    margin-right: 20px;
+    align-self: center;
+  }
+
+  .summary {
+    width: 353px;
+  }
 }
 
 @media screen and (max-width: 599px) {
   body {
     margin: 0 10px; 
+  }
+
+  img {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .profile-pic {
+    overflow: hidden;
+    height: 80vw;
   }
 }
